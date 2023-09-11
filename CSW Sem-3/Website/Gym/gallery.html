@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Gym</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script>
+        // JavaScript for the image slideshow
+        let currentIndex = 0;
+        const images = ["gym1.jpg", "gym2.jpg", "gym3.jpg"]; // Add more image URLs as needed
+
+        function showImage(index) {
+            const imageElement = document.querySelector(".gallery-image img");
+            imageElement.src = images[index];
+            currentIndex = index;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Initialize the slideshow
+        showImage(currentIndex);
+
+        // Automatically advance the slideshow
+        setInterval(nextImage, 5000); // Change image every 5 seconds
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Your header content here -->
+    </header>
+
+    <nav>
+        <!-- Your navigation menu here -->
+    </nav>
+
+    <div class="container">
+        <h2>Photo Gallery</h2>
+        <p>
+            Explore our gym's facilities and the motivating environment that will inspire your fitness journey.
+        </p>
+
+        <div class="gallery-image">
+            <img src="gym1.jpg" alt="Gym Image 1">
+        </div>
+
+        <div class="gallery-image">
+            <img src="gym2.jpg" alt="Gym Image 2">
+        </div>
+
+        <!-- Add more gallery images here -->
+    </div>
+
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+</body>
+</html>
