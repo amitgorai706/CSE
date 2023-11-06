@@ -9,7 +9,7 @@
         $(document).ready(function () {
             $("#add-row").click(function () {
                 var id = $("#my-table tr").length;
-                var row = "<tr><td>" + id + "</td><td>New Name</td><td>New Age</td><td><button class='change-color'>Change Color</button></td></tr>";
+                var row = "<tr><td>New Name</td><td>New Age</td><td><button class='change-color'>Change Color</button></td></tr>";
                 $("#my-table tbody").append(row);
             });
             $("#my-table").on("click", ".change-color", function () {
@@ -17,7 +17,7 @@
             });
             $("#remove-elements").click(function () {
                 var id = $("#remove-id").val();
-                $("#" + id).remove();
+                document.getElementById("my-table").deleteRow(id);
             });
         });
     </script>
@@ -39,19 +39,16 @@
 <body>
     <table id="my-table">
         <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Age</th>
             <th>Actions</th>
         </tr>
         <tr>
-            <td>1</td>
             <td>John</td>
             <td>25</td>
             <td><button class="change-color">Change Color</button></td>
         </tr>
         <tr>
-            <td>2</td>
             <td>Jane</td>
             <td>30</td>
             <td><button class="change-color">Change Color</button></td>
