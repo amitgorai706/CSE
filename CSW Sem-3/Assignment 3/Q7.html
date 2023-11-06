@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var email = $("#email").val;
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                if ( $("#name").val.length === 0 || $("#email").val.length === 0 ) {
+                    alert("All fields are required.");
+                }
+
+                if (!email.match(emailPattern)) {
+                    $("p").html("Please enter a valid email address.");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="Form">
+        <input type="text" id="name" placeholder="Enter your Name">
+        <input type="email" id="email" placeholder="Enter your Email">
+        <p id="emailError"></p>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

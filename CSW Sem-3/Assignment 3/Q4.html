@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: whitesmoke;
+            border: 1px solid black;
+            padding: 20px;
+            display: none;
+        }
+        #popup:target {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#popup">Open Popup</a>
+
+    <div id="popup">
+        <h2>This is a Popup Box</h2>
+        <p>Here is some content for the popup box.</p>
+        <a href="#">Close Popup</a>
+    </div>
+</body>
+</html>
