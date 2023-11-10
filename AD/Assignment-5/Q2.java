@@ -14,7 +14,7 @@ public class Q2 {
 
     public static void main(String[] args) {
         int[] arr = { 2, 3, 4, 10, 40 };
-        int x = 10;
+        int x = 3;
 
         int result = search(arr, 0, arr.length - 1, x);
         if (result == -1) {
