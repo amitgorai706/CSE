@@ -14,7 +14,7 @@ public class Q4 {
             }
             seenElements.add(element);
         }
-        System.out.println("Maximum Difference: " + maxDifference);
+        System.out.println("Maximum Difference: " + maxDifference); 
         System.out.println("Minimum Difference: " + minDifference);
     }
     public static void main(String[] args) {
