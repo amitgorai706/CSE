@@ -1,14 +1,6 @@
-class Node {
-    int data;
-    Node next;
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-class LinkedList {
+class LinkedList4 {
     Node head;
-    public LinkedList() {
+    public LinkedList4() {
         this.head = null;
     }
     public void append(int data) {
@@ -35,7 +27,7 @@ class LinkedList {
 }
 public class Q4 {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList4 list = new LinkedList4();
         list.append(1);
         list.append(2);
         list.append(3);

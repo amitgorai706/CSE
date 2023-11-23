@@ -1,16 +1,7 @@
-class Node {
-    int data;
-    Node next;
-
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-class LinkedList {
+class LinkedList2 {
     Node head;
 
-    public LinkedList() {
+    public LinkedList2() {
         this.head = null;
     }
     public void insertAtBeginning(int data) {
@@ -48,7 +39,7 @@ class LinkedList {
 }
 public class Q2 {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList2 list = new LinkedList2();
         list.insertAtBeginning(3);
         list.insertAtBeginning(2);
         list.insertAtBeginning(1);

@@ -1,14 +1,6 @@
-class Node {
-    int data;
-    Node next;
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-class LinkedList {
+class LinkedList3 {
     Node head;
-    public LinkedList() {
+    public LinkedList3() {
         this.head = null;
     }
     public void deleteNode(int key) {
@@ -40,7 +32,7 @@ class LinkedList {
 }
 public class Q3 {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList3 list = new LinkedList3();
         list.head = new Node(1);
         Node second = new Node(2);
         Node third = new Node(3);
