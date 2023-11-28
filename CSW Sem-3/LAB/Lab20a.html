@@ -7,14 +7,6 @@
     <title>Registration Page</title>
     <script src="jquery-3.7.1.js"></script>
     <script>
-        // $(document).ready(function () {
-        //     var numberRegex = /^[a-zA-Z]+$/;
-        //     var str = $("#name").val;
-        //     if (numberRegex.test(str)) {
-        //         alert("I am a number");
-        //     };
-        // });
-
         $(document).ready(function () {
             $('#submit').click(function (e) {
                 var name = $('#name').val();
@@ -91,7 +83,6 @@
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$"
                 title="Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 special character and 1 number."
                 required id="password">
-            <!-- <input type="password" class="input-field" placeholder="Confirm Password" required> -->
             <p class="error" id="password-error"></p>
             <div>
                 <label class="radio-label">
