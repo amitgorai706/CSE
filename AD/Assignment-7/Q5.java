@@ -48,7 +48,7 @@ public class Q5 {
         System.out.println("Original Linked List:");
         list.traverse();
         list.reverse();
-        System.out.println("\nReversed Linked List:");
+        System.out.println("Reversed Linked List:");
         list.traverse();
     }
 }
