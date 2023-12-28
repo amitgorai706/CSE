@@ -1,4 +1,3 @@
-package LAB_9;
 class SimpleStack {
     private int maxSize;
     private int top;
@@ -32,15 +31,12 @@ class SimpleStack {
 
     public static void main(String[] args) {
         SimpleStack stack = new SimpleStack(3);
-
         stack.push(10);
         stack.push(20);
         stack.push(30);
-
         stack.pop();
         stack.pop();
         stack.pop();
-
         stack.pop();
     }
 }

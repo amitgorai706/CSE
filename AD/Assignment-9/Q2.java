@@ -1,4 +1,3 @@
-package LAB_8;
 import java.util.LinkedList;
 import java.util.Queue;
 public class Q2 {

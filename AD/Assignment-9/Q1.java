@@ -1,4 +1,3 @@
-package LAB_8;
 import java.util.Stack;
 public class Q1 {
     public static void main(String[] args) {

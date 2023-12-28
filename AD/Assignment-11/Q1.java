@@ -1,4 +1,3 @@
-package LAB_10;
 class SimpleQueue {
     private int maxSize;
     private int front;
