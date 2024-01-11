@@ -13,5 +13,6 @@ public class Q1 {
     	System.out.print("Enter the number: ");
         int i = sc.nextInt();
         System.out.println("Number of bits:" + countSetBits(i));
+        sc.close();
     }
 }
