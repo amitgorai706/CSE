@@ -12,7 +12,6 @@ public class Q6 {
     }
     private static int subtract(int a, int b) {
         while (b != 0) {
-            // Calculate the borrow and set it in a
             int borrow = (~a) & b;
             a = a ^ b;
             b = borrow << 1;
