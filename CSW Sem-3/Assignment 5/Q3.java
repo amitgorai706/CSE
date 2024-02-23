@@ -14,8 +14,8 @@ public class Q3 {
     public static int swapBits(int number, int i, int j) {
        	int bitI = (number >> i) & 1;
       	int bitJ = (number >> j) & 1;
-	int x = bitI ^ bitJ;
-	x = (x << i) | (x << j);
+	    int x = bitI ^ bitJ;
+	    x = (x << i) | (x << j);
     	int result = number ^ x;
         return result;
     }
