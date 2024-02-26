@@ -1,11 +1,10 @@
-// Interface defining methods for enrollment system
+import java.util.*;
 interface EnrollmentSystem {
     void enrollStudent(Student student, Course course);
     void dropStudent(Student student, Course course);
     void displayEnrollmentDetails();
 }
 
-// Student class representing a student
 class Student {
     private String studentId;
     private String studentName;
@@ -24,7 +23,6 @@ class Student {
     }
 }
 
-// Course class representing a course
 class Course {
     private String courseId;
     private String courseName;
@@ -43,7 +41,6 @@ class Course {
     }
 }
 
-// Enrollment class managing student enrollment in courses
 class Enrollment implements EnrollmentSystem {
     private List<Student> enrolledStudents;
     private List<Course> enrolledCourses;
@@ -82,28 +79,22 @@ class Enrollment implements EnrollmentSystem {
     }
 }
 
-// Main class to demonstrate the system's functionality
-public class Main {
+public class Q9 {
     public static void main(String[] args) {
         EnrollmentSystem enrollmentSystem = new Enrollment();
 
-        // Creating sample students and courses
         Student student1 = new Student("101", "Alice");
         Student student2 = new Student("102", "Bob");
         Course course1 = new Course("CSC101", "Introduction to Computer Science");
         Course course2 = new Course("MAT201", "Calculus");
 
-        // Enrolling students in courses
         enrollmentSystem.enrollStudent(student1, course1);
         enrollmentSystem.enrollStudent(student2, course2);
 
-        // Displaying enrollment details
         enrollmentSystem.displayEnrollmentDetails();
 
-        // Dropping a student from a course
         enrollmentSystem.dropStudent(student1, course1);
 
-        // Displaying updated enrollment details
         enrollmentSystem.displayEnrollmentDetails();
     }
 }

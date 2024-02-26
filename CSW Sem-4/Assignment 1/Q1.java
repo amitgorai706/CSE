@@ -28,19 +28,13 @@ public class Q1 {
         Car myCar1 = new Car("Toyota", "Camry");
         Car myCar2 = new Car(null, null);
 
-        System.out.println("Initial make and model of myCar1:");
-        System.out.println("Make: " + myCar1.getMake());
-        System.out.println("Model: " + myCar1.getModel());
+        System.out.println("Initial make and model of myCar1:" + "\nMake: " + myCar1.getMake() + "\nModel: " + myCar1.getModel());
 
-        System.out.println("\nInitial make and model of myCar2:");
-        System.out.println("Make: " + myCar2.getMake());
-        System.out.println("Model: " + myCar2.getModel());
+        System.out.println("\nInitial make and model of myCar2:" + "\nMake: " + myCar2.getMake() + "\nModel: " + myCar2.getModel());
 
         myCar2.setMake("Honda");
         myCar2.setModel("Accord");
 
-        System.out.println("\nUpdated make and model of myCar2:");
-        System.out.println("Make: " + myCar2.getMake());
-        System.out.println("Model: " + myCar2.getModel());
+        System.out.println("\nUpdated make and model of myCar2:" + "\nMake: " + myCar2.getMake() + "\nModel: " + myCar2.getModel());
     }
 }

@@ -3,7 +3,7 @@ interface Vehicle {
     void brake();
 }
 
-class Car implements Vehicle {
+class Car1 implements Vehicle {
     public void accelerate() {
         System.out.println("Car is accelerating");
     }
@@ -37,7 +37,7 @@ class Bicycle implements Vehicle {
 
 public class Q8 {
     public static void main(String[] args) {
-        Car car = new Car();
+        Car1 car = new Car1();
         Bicycle bicycle = new Bicycle();
         
         System.out.println("Car:");

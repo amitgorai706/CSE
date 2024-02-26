@@ -1,61 +1,61 @@
 abstract class Account {
-    private int accountNumber;
-    protected double balance;
+    private int accNum;
+    protected double bal;
     
-    public Account(int accountNumber, double balance) {
-        this.accountNumber = accountNumber;
-        this.balance = balance;
+    public Account(int accNum, double bal) {
+        this.accNum = accNum;
+        this.bal = bal;
     }
     
-    public int getAccountNumber() {
-        return accountNumber;
+    public int getAccNum() {
+        return accNum;
     }
     
-    public double getBalance() {
-        return balance;
+    public double getBal() {
+        return bal;
     }
     
-    public abstract void deposit(double amount);
+    public abstract void deposit(double amt);
     
-    public abstract void withdraw(double amount);
+    public abstract void withdraw(double amt);
 }
 
-class SavingsAccount extends Account {
-    private double interestRate;
+class SavAcc extends Account {
+    private double intRate;
     
-    public SavingsAccount(int accountNumber, double balance, double interestRate) {
-        super(accountNumber, balance);
-        this.interestRate = interestRate;
+    public SavAcc(int accNum, double bal, double intRate) {
+        super(accNum, bal);
+        this.intRate = intRate;
     }
     
     public double getInterestRate() {
-        return interestRate;
+        return intRate;
     }
     
     @Override
-    public void deposit(double amount) {
-        double interest = amount * interestRate / 100;
-        double totalAmount = amount + interest;
-        super.balance += totalAmount;
-        System.out.println("Deposit of $" + amount + " with interest $" + interest + " successful. New balance: $" + super.balance);
+    public void deposit(double amt) {
+        double interest = amt * intRate / 100;
+        double totAmt = amt + interest;
+        super.bal += totAmt;
+        System.out.println("Deposit of $" + amt + " with interest $" + interest + " successful. New balance: $" + super.bal);
     }
     
     @Override
     public void withdraw(double amount) {
-        if (amount <= super.balance) {
-            super.balance -= amount;
-            System.out.println("Withdrawal of $" + amount + " successful. New balance: $" + super.balance);
+        if (amount <= super.bal) {
+            super.bal -= amount;
+            System.out.println("Withdrawal of $" + amount + " successful. New balance: $" + super.bal);
         } else {
             System.out.println("Insufficient balance for withdrawal.");
         }
     }
 }
 
-class CurrentAccount extends Account {
+class CurrAcc extends Account {
     private double overdraftLimit;
     
-    public CurrentAccount(int accountNumber, double balance, double overdraftLimit) {
-        super(accountNumber, balance);
+    public CurrAcc(int accNum, double bal, double overdraftLimit) {
+        super(accNum, bal);
         this.overdraftLimit = overdraftLimit;
     }
     
@@ -64,16 +64,16 @@ class CurrentAccount extends Account {
     }
     
     @Override
-    public void deposit(double amount) {
-        super.balance += amount;
-        System.out.println("Deposit of $" + amount + " successful. New balance: $" + super.balance);
+    public void deposit(double amt) {
+        super.bal += amt;
+        System.out.println("Deposit of $" + amt + " successful. New balance: $" + super.bal);
     }
     
     @Override
-    public void withdraw(double amount) {
-        if (amount <= super.balance + overdraftLimit) {
-            super.balance -= amount;
-            System.out.println("Withdrawal of $" + amount + " successful. New balance: $" + super.balance);
+    public void withdraw(double amt) {
+        if (amt <= super.bal + overdraftLimit) {
+            super.bal -= amt;
+            System.out.println("Withdrawal of $" + amt + " successful. New balance: $" + super.bal);
         } else {
             System.out.println("Withdrawal amount exceeds overdraft limit.");
         }
@@ -82,18 +82,14 @@ class CurrentAccount extends Account {
 
 public class Q7 {
     public static void main(String[] args) {
-        SavingsAccount savingsAccount = new SavingsAccount(1001, 5000, 5);
-        System.out.println("Savings Account Details:");
-        System.out.println("Account Number: " + savingsAccount.getAccountNumber());
-        System.out.println("Balance: $" + savingsAccount.getBalance());
+        SavAcc savingsAccount = new SavAcc(1001, 5000, 5);
+        System.out.println("Savings Account Details:" + "\nAccount Number: " + savingsAccount.getAccNum() + "\nBalance: $" + savingsAccount.getBal());
         savingsAccount.deposit(1000);
         savingsAccount.withdraw(2000);
         
-        CurrentAccount currentAccount = new CurrentAccount(2001, 8000, 2000);
-        System.out.println("\nCurrent Account Details:");
-        System.out.println("Account Number: " + currentAccount.getAccountNumber());
-        System.out.println("Balance: $" + currentAccount.getBalance());
-        currentAccount.deposit(1500);
-        currentAccount.withdraw(10000);
+        CurrAcc currAcc = new CurrAcc(2001, 8000, 2000);
+        System.out.println("\nCurrent Account Details:" + "\nAccount Number: " + currAcc.getAccNum() + "\nBalance: $" + currAcc.getBal());
+        currAcc.deposit(1500);
+        currAcc.withdraw(10000);
     }
 }

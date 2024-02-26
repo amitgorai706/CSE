@@ -1,5 +1,5 @@
 class College {
-    private String clgName,clgLoc;
+    private String clgName, clgLoc;
     
     public College(String clgName, String clgLoc) {
         this.clgName = clgName;
@@ -14,7 +14,7 @@ class College {
         return clgLoc;
     }
 }
-
+  
 class Student {
     private int studentId;
     private String studentName;
@@ -31,7 +31,6 @@ class Student {
         System.out.println("Student Name: " + studentName);
         System.out.println("College Name: " + college.getClgName());
         System.out.println("College Location: " + college.getClgLoc());
-        System.out.println();
     }
 }
 
@@ -46,17 +45,15 @@ public class Q5 {
         System.out.println("College 1:");
         System.out.println("Name: " + college1.getClgName());
         System.out.println("Location: " + college1.getClgLoc());
-        System.out.println();
         
-        System.out.println("College 2:");
+        System.out.println("\nCollege 2:");
         System.out.println("Name: " + college2.getClgName());
         System.out.println("Location: " + college2.getClgLoc());
-        System.out.println();
         
-        System.out.println("Student 1:");
+        System.out.println("\nStudent 1:");
         student1.displayStudentInfo();
         
-        System.out.println("Student 2:");
+        System.out.println("\nStudent 2:");
         student2.displayStudentInfo();
     }
 }

@@ -43,9 +43,7 @@ class Book extends LibraryResource {
     
     @Override
     public void displayDetails() {
-        System.out.println("Book Title: " + getTitle());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Page Count: " + pageCount);
+        System.out.println("Book Title: " + getTitle() + "\nAuthor: " + getAuthor() + "\nPage Count: " + pageCount);
     }
 }
 
@@ -67,9 +65,7 @@ class Magazine extends LibraryResource {
     
     @Override
     public void displayDetails() {
-        System.out.println("Magazine Title: " + getTitle());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Issue Date: " + issueDate);
+        System.out.println("Book Title: " + getTitle() + "\nAuthor: " + getAuthor() + "\nIssue Date: " + issueDate);
     }
 }
 
@@ -91,9 +87,7 @@ class DVD extends LibraryResource {
     
     @Override
     public void displayDetails() {
-        System.out.println("DVD Title: " + getTitle());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Duration: " + duration + " minutes");
+        System.out.println("Book Title: " + getTitle() + "\nAuthor: " + getAuthor() + "\nDuration: " + duration + " minutes");
     }
 }
 
@@ -105,13 +99,11 @@ public class Q6 {
         
         System.out.println("Book Details:");
         book.displayDetails();
-        System.out.println();
         
-        System.out.println("Magazine Details:");
+        System.out.println("\nMagazine Details:");
         magazine.displayDetails();
-        System.out.println();
-        
-        System.out.println("DVD Details:");
+
+        System.out.println("\nDVD Details:");
         dvd.displayDetails();
     }
 }
