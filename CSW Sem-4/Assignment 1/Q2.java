@@ -1,48 +1,46 @@
-class Rectangle {
-    private double length, width;
+import java.util.*;
 
-    public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
+class Employee {
+    private String name;
+    private int age, sal;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getLength() {
-        return length;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setSal(int sal) {
+        this.sal = sal;
     }
 
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public double calculateArea() {
-        return length * width;
-    }
-
-    public double calculatePerimeter() {
-        return 2 * (length + width);
+    public void displayDetails() {
+        System.out.println("\nEmployee Details:" + "\nName: " + name + "\nAge: " + age + "\nSalary: " + sal);
     }
 }
 
 public class Q2 {
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(5.0, 4.0);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Initial Length: " + rectangle.getLength() + "\nInitial Width: " + rectangle.getWidth());
+        Employee emp = new Employee();
 
-        rectangle.setLength(7.0);
-        rectangle.setWidth(3.0);
+        System.out.print("Enter employee name: ");
+        String name = sc.nextLine();
+        emp.setName(name);
 
-        System.out.println("Updated Length: " + rectangle.getLength() + "\nUpdated Width: " + rectangle.getWidth());
-        
-        System.out.println("Area of the Rectangle: " + rectangle.calculateArea());
-        System.out.println("Perimeter of the Rectangle: " + rectangle.calculatePerimeter());
+        System.out.print("Enter employee age: ");
+        int age = sc.nextInt();
+        emp.setAge(age);
+
+        System.out.print("Enter employee salary: ");
+        int sal = sc.nextInt();
+        emp.setSal(sal);
+
+        System.out.println("Employee details set successfully.");
+
+        emp.displayDetails();
     }
 }
