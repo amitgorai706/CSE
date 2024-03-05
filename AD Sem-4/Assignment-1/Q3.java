@@ -34,8 +34,7 @@ public class Q3 {
             sptSet[u] = true;
 
             for (int v = 0; v < V; v++) {
-                if (!sptSet[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE
-                        && dist[u] + graph[u][v] < dist[v]) {
+                if (!sptSet[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][v] < dist[v]) {
                     dist[v] = dist[u] + graph[u][v];
                 }
             }
