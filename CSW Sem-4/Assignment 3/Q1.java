@@ -36,7 +36,7 @@ class Student1 {
 public class Q1 {
     public static void main(String[] args) {
         Student1 student1 = new Student1("John Doe", "12345", 20);
-        Student1 student2 = new Student1("Jane Smith", "67890", 22); // Roll number as integer
+        Student1 student2 = new Student1("Jane Smith", "67890", 22);
 
         System.out.println("Student 1:" + "\nName: " + student1.getName() + "\nRoll Number: " + student1.getRollNum() + "\nAge: " + student1.getAge());
 
