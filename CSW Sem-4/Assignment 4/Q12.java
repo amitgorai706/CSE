@@ -6,7 +6,7 @@ public class Q12 {
 
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int num : arr) {
-            minHeap.offer(num); // Add elements to the heap
+            minHeap.offer(num);
         }
 
         System.out.println("Dequeued elements from the min heap:");
