@@ -1,8 +1,7 @@
 import java.util.*;
 
 class Interval {
-    int start;
-    int end;
+    int start, end;
 
     public Interval(int start, int end) {
         this.start = start;
