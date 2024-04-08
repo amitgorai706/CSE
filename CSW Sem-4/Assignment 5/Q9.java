@@ -19,7 +19,7 @@ public class Q9 {
             sc.close();
         }
     }
-
+    
     public static double divide(int dividend, int divisor) {
         if (divisor == 0) {
             throw new ArithmeticException("Division by zero is not allowed.");
