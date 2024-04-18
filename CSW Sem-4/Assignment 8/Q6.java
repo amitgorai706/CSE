@@ -27,5 +27,6 @@ public class Q6 {
         } else {
             System.out.println("The two strings are not equal (ignoring case).");
         }
+        sc.close();
     }
 }
